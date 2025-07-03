@@ -23,9 +23,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto md:mx-0">
           {/* Terminal Header - Responsive */}
-          <div className="mb-6 md:mb-8 flex items-center gap-2 md:gap-4">
-            <Terminal className="w-5 h-5 md:w-8 md:h-8 electric-text" />
-          </div>
+          {/* Removed Terminal icon and container as requested */}
           
           {/* Main Content - Responsive */}
           <div className="brutal-border-thick bg-background p-6 md:p-12 brutal-shadow-lg">
