@@ -12,7 +12,7 @@ const Projects = () => {
       year: "2024",
       liveUrl: "https://eventmashups.com",
       codeUrl: null,
-      image: "https://image.thum.io/get/width/800/crop/800/https://eventmashups.com"
+      image: "/eventmashups.png"
     },
     {
       id: "02", 
