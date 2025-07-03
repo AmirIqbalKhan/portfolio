@@ -24,22 +24,6 @@ const Projects = () => {
       liveUrl: "https://starkfunded.com",
       codeUrl: null,
       image: "/starkfunded.png"
-    },
-    {
-      id: "03",
-      title: "TASK MANAGEMENT APP", 
-      description: "MINIMALIST TASK TRACKER WITH DRAG-AND-DROP FUNCTIONALITY AND TEAM COLLABORATION FEATURES.",
-      tech: ["REACT", "TAILWIND", "SUPABASE", "FRAMER MOTION"],
-      status: "LIVE",
-      year: "2023"
-    },
-    {
-      id: "04",
-      title: "WEATHER FORECAST APP",
-      description: "BRUTAL WEATHER APPLICATION WITH LOCATION-BASED FORECASTS AND MINIMALIST DATA VISUALIZATION.",
-      tech: ["JAVASCRIPT", "API", "CHART.JS", "CSS3"],
-      status: "LIVE", 
-      year: "2023"
     }
   ]
 
@@ -165,10 +149,12 @@ const Projects = () => {
         
         {/* View All Button */}
         <div className="text-center mt-16">
-          <Button variant="brutal" size="lg">
-            <Github className="w-5 h-5" />
-            VIEW ALL ON GITHUB
-          </Button>
+          <a href="https://github.com/AmirIqbalKhan" target="_blank" rel="noopener noreferrer">
+            <Button variant="brutal" size="lg">
+              <Github className="w-5 h-5" />
+              VIEW ALL ON GITHUB
+            </Button>
+          </a>
         </div>
       </div>
     </section>
