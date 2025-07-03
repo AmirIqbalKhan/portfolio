@@ -35,7 +35,7 @@ const Hero = () => {
             
             <div className="mb-6 md:mb-8">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-mono mb-3 md:mb-4 text-industrial-gray">
-                &gt; FRONT-END DEVELOPER
+                &gt; FULL STACK DEVELOPER
               </h2>
               <p className="text-base md:text-lg font-mono max-w-2xl leading-relaxed">
                 4 YEARS OF EXPERIENCE CRAFTING 

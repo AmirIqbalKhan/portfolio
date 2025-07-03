@@ -30,7 +30,7 @@ const Contact = () => {
                 <p className="text-xs md:text-sm text-gray-300">
                   I'M ALWAYS OPEN TO DISCUSSING NEW OPPORTUNITIES,
                   COLLABORATIONS, OR JUST TALKING SHOP ABOUT THE LATEST
-                  FRONT-END TECHNOLOGIES.
+                  FULL STACK TECHNOLOGIES.
                 </p>
               </div>
               

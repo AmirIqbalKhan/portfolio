@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="font-mono font-bold text-xl">AAMIR.DEV</span>
             </div>
             <p className="font-mono text-sm text-gray-400 leading-relaxed">
-              FRONT-END DEVELOPER CRAFTING BRUTAL DIGITAL EXPERIENCES
+              FULL STACK DEVELOPER CRAFTING BRUTAL DIGITAL EXPERIENCES
               WITH 4 YEARS OF UNCOMPROMISING DEDICATION.
             </p>
           </div>

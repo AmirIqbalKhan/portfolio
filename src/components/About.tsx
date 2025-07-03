@@ -24,7 +24,7 @@ const About = () => {
                 <span className="text-electric">$</span> whoami
                 <br />
                 <span className="text-gray-300">
-                  AAMIR IQBAL - FRONT-END DEVELOPER WITH 4 YEARS OF RAW EXPERIENCE
+                  AAMIR IQBAL - FULL STACK DEVELOPER WITH 4 YEARS OF RAW EXPERIENCE
                 </span>
               </div>
               
