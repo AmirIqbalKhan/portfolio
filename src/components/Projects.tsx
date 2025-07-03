@@ -16,11 +16,14 @@ const Projects = () => {
     },
     {
       id: "02", 
-      title: "PORTFOLIO DASHBOARD",
-      description: "ADMINISTRATIVE DASHBOARD FOR PORTFOLIO MANAGEMENT WITH REAL-TIME ANALYTICS AND CONTENT MANAGEMENT.",
-      tech: ["NEXT.JS", "TYPESCRIPT", "PRISMA", "POSTGRESQL"],
-      status: "DEVELOPMENT",
-      year: "2024"
+      title: "STARKFUNDED.COM",
+      description: "DISCOVER AND TRACK PROJECTS FUNDED BY STARKNET ECOSYSTEM. REAL-TIME DATA, ANALYTICS, AND PROJECT INSIGHTS.",
+      tech: ["NEXT.JS", "TYPESCRIPT", "TAILWIND", "SUPABASE"],
+      status: "LIVE",
+      year: "2024",
+      liveUrl: "https://starkfunded.com",
+      codeUrl: null,
+      image: "https://image.thum.io/get/width/800/crop/800/https://starkfunded.com"
     },
     {
       id: "03",
