@@ -5,13 +5,13 @@ import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react"
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-concrete-dark text-raw-white">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section id="contact" className="py-16 md:py-24 bg-concrete-dark text-raw-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
           {/* Left Column - Contact Info */}
           <div>
-            <div className="mb-12">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <div className="mb-8 md:mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6">
                 GET IN
                 <br />
                 <span className="electric-text">TOUCH</span>
@@ -21,13 +21,13 @@ const Contact = () => {
             
             <div className="space-y-8">
               <div className="font-mono">
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6">
                   READY TO BUILD SOMETHING 
                   <span className="electric-text font-bold"> BRUTAL</span> TOGETHER?
                   <br />
                   LET'S DISCUSS YOUR NEXT PROJECT.
                 </p>
-                <p className="text-sm text-gray-300">
+                <p className="text-xs md:text-sm text-gray-300">
                   I'M ALWAYS OPEN TO DISCUSSING NEW OPPORTUNITIES,
                   COLLABORATIONS, OR JUST TALKING SHOP ABOUT THE LATEST
                   FRONT-END TECHNOLOGIES.
@@ -72,7 +72,7 @@ const Contact = () => {
           </div>
           
           {/* Right Column - Contact Form */}
-          <div className="bg-background text-foreground p-8 brutal-border brutal-shadow-lg">
+          <div className="bg-background text-foreground p-4 md:p-8 brutal-border brutal-shadow-lg">
             <div className="flex items-center gap-3 mb-6">
               <Send className="w-6 h-6 electric-text" />
               <h3 className="text-2xl font-bold">SEND MESSAGE</h3>

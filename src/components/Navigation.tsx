@@ -27,7 +27,7 @@ const Navigation = () => {
         ? 'bg-background/95 backdrop-blur-sm brutal-border-b' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">

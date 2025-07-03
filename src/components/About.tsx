@@ -9,17 +9,17 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="py-24 bg-concrete">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section id="about" className="py-16 md:py-24 bg-concrete">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
           {/* Left Column - Terminal Style About */}
-          <div className="bg-raw-black text-raw-white p-8 font-mono brutal-border brutal-shadow-lg">
+          <div className="bg-raw-black text-raw-white p-4 md:p-8 font-mono brutal-border brutal-shadow-lg">
             <div className="flex items-center gap-2 mb-6 text-electric">
               <Terminal className="w-5 h-5" />
               <span>about.exe --verbose</span>
             </div>
             
-            <div className="space-y-4 text-sm leading-relaxed">
+            <div className="space-y-4 text-xs md:text-sm leading-relaxed">
               <div>
                 <span className="text-electric">$</span> whoami
                 <br />

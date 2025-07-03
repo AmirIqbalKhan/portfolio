@@ -38,31 +38,31 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="mb-16">
+        <div className="mb-12 md:mb-16">
           <div className="flex items-center gap-4 mb-6">
             <Code2 className="w-8 h-8 electric-text" />
-            <h2 className="text-4xl md:text-6xl font-bold">PROJECTS</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold">PROJECTS</h2>
           </div>
           <div className="h-2 w-32 bg-electric brutal-shadow-sm" />
         </div>
 
         {/* Projects Grid */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`grid lg:grid-cols-12 gap-8 items-start ${
+              className={`grid lg:grid-cols-12 gap-6 md:gap-8 items-start ${
                 index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
               }`}
             >
               {/* Project Info */}
               <div className={`lg:col-span-7 ${index % 2 === 1 ? 'lg:col-start-6' : ''}`}>
-                <div className="bg-concrete p-8 brutal-border brutal-shadow">
+                <div className="bg-concrete p-4 md:p-8 brutal-border brutal-shadow">
                   <div className="flex items-start justify-between mb-4">
-                    <span className="text-6xl font-bold text-electric font-mono">
+                    <span className="text-4xl md:text-6xl font-bold text-electric font-mono">
                       {project.id}
                     </span>
                     <div className="text-right">
@@ -79,21 +79,21 @@ const Projects = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">
                     {project.title}
                   </h3>
                   
-                  <p className="font-mono text-sm leading-relaxed mb-6 text-muted-foreground">
+                  <p className="font-mono text-xs md:text-sm leading-relaxed mb-4 md:mb-6 text-muted-foreground">
                     {project.description}
                   </p>
                   
                   {/* Tech Stack */}
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
+                  <div className="mb-4 md:mb-6">
+                    <div className="flex flex-wrap gap-1 md:gap-2">
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-background brutal-border text-xs font-mono font-bold"
+                          className="px-2 md:px-3 py-1 bg-background brutal-border text-xs font-mono font-bold"
                         >
                           {tech}
                         </span>
@@ -102,7 +102,7 @@ const Projects = () => {
                   </div>
                   
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                     <Button variant="electric" size="sm">
                       <ExternalLink className="w-4 h-4" />
                       LIVE DEMO
