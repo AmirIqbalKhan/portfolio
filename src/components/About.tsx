@@ -3,9 +3,10 @@ import { Terminal, Coffee, Zap } from "lucide-react"
 
 const About = () => {
   const skills = [
-    "REACT", "TYPESCRIPT", "NEXT.JS", "TAILWIND CSS",
-    "NODE.JS", "JAVASCRIPT", "HTML5", "CSS3",
-    "GIT", "FIGMA", "WEBPACK", "VITE"
+    "REACT", "TYPESCRIPT", "NEXT.JS", "NODE.JS",
+    "EXPRESS.JS", "POSTGRESQL", "MONGODB", "SUPABASE",
+    "TAILWIND CSS", "JAVASCRIPT", "HTML5", "CSS3",
+    "GIT", "DOCKER", "AWS", "VERCEL"
   ]
 
   return (
