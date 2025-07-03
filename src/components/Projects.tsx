@@ -23,7 +23,7 @@ const Projects = () => {
       year: "2024",
       liveUrl: "https://starkfunded.com",
       codeUrl: null,
-      image: "https://image.thum.io/get/width/800/crop/800/https://starkfunded.com"
+      image: "/starkfunded.png"
     },
     {
       id: "03",
