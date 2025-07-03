@@ -11,7 +11,8 @@ const Projects = () => {
       status: "LIVE",
       year: "2024",
       liveUrl: "https://eventmashups.com",
-      codeUrl: null
+      codeUrl: null,
+      image: "https://www.screenshotapi.net/api/v1/screenshot?url=https://eventmashups.com&token=demo" // Replace with a real API key for production
     },
     {
       id: "02", 
@@ -133,16 +134,23 @@ const Projects = () => {
               {/* Project Visual */}
               <div className={`lg:col-span-5 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div className="aspect-video bg-concrete-dark brutal-border brutal-shadow-lg relative overflow-hidden">
-                  {/* Placeholder for project image */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <Code2 className="w-16 h-16 text-electric mx-auto mb-4" />
-                      <div className="font-mono text-electric font-bold">
-                        {project.title}
+                  {/* Project image or placeholder */}
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <Code2 className="w-16 h-16 text-electric mx-auto mb-4" />
+                        <div className="font-mono text-electric font-bold">
+                          {project.title}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
+                  )}
                   {/* Overlay Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-electric/20" />
                 </div>
