@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Brutalist Color Extensions */
+				electric: 'hsl(var(--electric))',
+				'electric-dark': 'hsl(var(--electric-dark))',
+				concrete: 'hsl(var(--concrete))',
+				'concrete-dark': 'hsl(var(--concrete-dark))',
+				'raw-black': 'hsl(var(--raw-black))',
+				'raw-white': 'hsl(var(--raw-white))',
+				'industrial-gray': 'hsl(var(--industrial-gray))'
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Courier New', 'monospace'],
+				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
