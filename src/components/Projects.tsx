@@ -12,7 +12,7 @@ const Projects = () => {
       year: "2024",
       liveUrl: "https://eventmashups.com",
       codeUrl: null,
-      image: "https://www.screenshotapi.net/api/v1/screenshot?url=https://eventmashups.com&token=demo" // Replace with a real API key for production
+      image: "https://image.thum.io/get/width/800/crop/800/https://eventmashups.com"
     },
     {
       id: "02", 
