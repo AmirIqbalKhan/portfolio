@@ -25,7 +25,6 @@ const Hero = () => {
           {/* Terminal Header - Responsive */}
           <div className="mb-6 md:mb-8 flex items-center gap-2 md:gap-4">
             <Terminal className="w-5 h-5 md:w-8 md:h-8 electric-text" />
-            <span className="text-sm md:text-lg font-mono text-muted-foreground">~/portfolio/aamir-iqbal</span>
           </div>
           
           {/* Main Content - Responsive */}

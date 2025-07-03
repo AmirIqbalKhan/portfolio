@@ -5,11 +5,13 @@ const Projects = () => {
   const projects = [
     {
       id: "01",
-      title: "E-COMMERCE PLATFORM",
-      description: "FULL-STACK REACT APPLICATION WITH STRIPE INTEGRATION, REAL-TIME INVENTORY, AND BRUTAL UI DESIGN.",
-      tech: ["REACT", "NODE.JS", "STRIPE", "MONGODB"],
+      title: "EVENTMASHUPS.COM",
+      description: "A MODERN EVENT DISCOVERY PLATFORM CONNECTING USERS TO THE LATEST EVENTS, CONFERENCES, AND MEETUPS WORLDWIDE.",
+      tech: ["NEXT.JS", "TYPESCRIPT", "TAILWIND", "SUPABASE"],
       status: "LIVE",
-      year: "2024"
+      year: "2024",
+      liveUrl: "https://eventmashups.com",
+      codeUrl: null
     },
     {
       id: "02", 
@@ -103,14 +105,27 @@ const Projects = () => {
                   
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
-                    <Button variant="electric" size="sm">
-                      <ExternalLink className="w-4 h-4" />
-                      LIVE DEMO
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Github className="w-4 h-4" />
-                      CODE
-                    </Button>
+                    {project.liveUrl ? (
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="electric" size="sm">
+                          <ExternalLink className="w-4 h-4" />
+                          LIVE DEMO
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button variant="electric" size="sm" disabled>
+                        <ExternalLink className="w-4 h-4" />
+                        LIVE DEMO
+                      </Button>
+                    )}
+                    {project.codeUrl && (
+                      <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="sm">
+                          <Github className="w-4 h-4" />
+                          CODE
+                        </Button>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
