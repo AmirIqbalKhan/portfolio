@@ -25,13 +25,6 @@ const Hero = () => {
           {/* Terminal Header - Responsive */}
           {/* Removed Terminal icon and container as requested */}
           
-          {/* Tagline - Added to fill empty space */}
-          <div className="mb-6 md:mb-8">
-            <span className="block text-lg md:text-2xl lg:text-3xl font-mono font-bold electric-text brutal-border px-4 py-2 bg-background inline-block shadow-lg">
-              Turning ideas into pixel-perfect reality.
-            </span>
-          </div>
-          
           {/* Main Content - Responsive */}
           <div className="brutal-border-thick bg-background p-6 md:p-12 brutal-shadow-lg">
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-tight">
