@@ -139,7 +139,8 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-contain bg-black p-2"
+                      style={{ objectPosition: 'center' }}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
