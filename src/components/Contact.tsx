@@ -1,9 +1,42 @@
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react"
 
 const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("");
+    try {
+      const res = await fetch("/api/contact-api", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus("Message sent successfully!");
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        const data = await res.json();
+        setStatus(data.error || "Failed to send. Try again.");
+      }
+    } catch {
+      setStatus("Failed to send. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-16 md:py-24 bg-concrete-dark text-raw-white">
       <div className="container mx-auto px-4 md:px-6">
@@ -77,14 +110,16 @@ const Contact = () => {
               <Send className="w-6 h-6 electric-text" />
               <h3 className="text-2xl font-bold">SEND MESSAGE</h3>
             </div>
-            
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-mono font-bold mb-2">
                     NAME*
                   </label>
-                  <Input 
+                  <Input
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
                     placeholder="YOUR NAME"
                     className="brutal-border font-mono"
                   />
@@ -93,41 +128,49 @@ const Contact = () => {
                   <label className="block text-sm font-mono font-bold mb-2">
                     EMAIL*
                   </label>
-                  <Input 
+                  <Input
+                    name="email"
                     type="email"
+                    value={form.email}
+                    onChange={handleChange}
                     placeholder="YOUR.EMAIL@DOMAIN.COM"
                     className="brutal-border font-mono"
                   />
                 </div>
               </div>
-              
               <div>
                 <label className="block text-sm font-mono font-bold mb-2">
                   SUBJECT*
                 </label>
-                <Input 
+                <Input
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
                   placeholder="PROJECT DISCUSSION"
                   className="brutal-border font-mono"
                 />
               </div>
-              
               <div>
                 <label className="block text-sm font-mono font-bold mb-2">
                   MESSAGE*
                 </label>
-                <Textarea 
+                <Textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
                   placeholder="TELL ME ABOUT YOUR PROJECT..."
                   rows={6}
                   className="brutal-border font-mono resize-none"
                 />
               </div>
-              
-              <Button type="submit" variant="electric" size="lg" className="w-full">
+              <Button type="submit" variant="electric" size="lg" className="w-full" disabled={loading}>
                 <Send className="w-5 h-5" />
-                SEND MESSAGE
+                {loading ? "SENDING..." : "SEND MESSAGE"}
               </Button>
+              {status && (
+                <div className="mt-2 text-center font-mono text-sm" style={{ color: status.includes("success") ? '#00d1ff' : '#ff3b3b' }}>{status}</div>
+              )}
             </form>
-            
             {/* Terminal Style Status */}
             <div className="mt-6 p-4 bg-raw-black text-electric font-mono text-sm brutal-border">
               <div className="flex items-center gap-2">
@@ -139,7 +182,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
