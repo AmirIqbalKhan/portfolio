@@ -1,9 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
-const resend = new Resend('re_6HCqEpTv_E7FNDL35pZcRpCLq88HeNm6P');
+const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  console.log("API Key present:", !!process.env.RESEND_API_KEY);
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -28,10 +29,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `,
     });
     if (error) {
+      console.error("Resend error:", error);
       return res.status(500).json({ error: error.message || 'Failed to send email' });
     }
     return res.status(200).json({ success: true, data });
   } catch (err: any) {
+    console.error("Handler error:", err);
     return res.status(500).json({ error: err.message || 'Internal server error' });
   }
 } 
