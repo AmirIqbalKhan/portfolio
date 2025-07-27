@@ -27,12 +27,12 @@ const Navigation = () => {
         ? 'bg-background/95 backdrop-blur-sm brutal-border-b' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <Terminal className="w-6 h-6 electric-text" />
-            <span className="font-mono font-bold text-lg">AAMIR.DEV</span>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Terminal className="w-5 h-5 sm:w-6 sm:h-6 electric-text" />
+            <span className="font-mono font-bold text-base sm:text-lg">AAMIR.DEV</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -56,19 +56,19 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 brutal-border brutal-shadow bg-background"
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background brutal-border brutal-shadow">
-            <div className="p-6 space-y-4">
+            <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block font-mono font-bold text-lg hover:text-electric transition-colors"
+                  className="block font-mono font-bold text-base sm:text-lg hover:text-electric transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
