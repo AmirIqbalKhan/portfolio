@@ -21,10 +21,10 @@ const Hero = () => {
       <div className="absolute top-1/2 right-4 sm:right-8 md:right-20 w-1 md:w-2 h-16 sm:h-24 md:h-48 bg-foreground" />
       
       <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Main Content - Responsive */}
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+          {/* Left Column - Content */}
           <div className="brutal-border-thick bg-background p-4 sm:p-6 md:p-12 brutal-shadow-lg">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-tight">
               AAMIR
               <br />
               <span className="electric-text">IQBAL</span>
@@ -71,10 +71,54 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 electric-text" />
+          {/* Right Column - Portrait with Brutalist Styling */}
+          <div className="relative">
+            {/* Main Portrait Container */}
+            <div className="relative brutal-border-thick bg-background p-2 sm:p-4 brutal-shadow-lg">
+              {/* Portrait Image */}
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/portrait.jpg" 
+                  alt="Aamir Iqbal - Full Stack Developer"
+                  className="w-full h-auto object-cover grayscale contrast-125 brightness-110"
+                  style={{ 
+                    filter: 'grayscale(100%) contrast(125%) brightness(110%)',
+                    aspectRatio: '3/4'
+                  }}
+                />
+                
+                {/* Brutalist Overlay Elements */}
+                <div className="absolute top-0 left-0 w-full h-full">
+                  {/* Electric Blue Accent Line */}
+                  <div className="absolute top-4 left-4 w-8 h-1 bg-electric brutal-shadow-sm" />
+                  <div className="absolute bottom-4 right-4 w-8 h-1 bg-electric brutal-shadow-sm" />
+                  
+                  {/* Geometric Corner Elements */}
+                  <div className="absolute top-0 left-0 w-6 h-6 bg-electric brutal-border" />
+                  <div className="absolute top-0 right-0 w-6 h-6 bg-electric brutal-border" />
+                  <div className="absolute bottom-0 left-0 w-6 h-6 bg-electric brutal-border" />
+                  <div className="absolute bottom-0 right-0 w-6 h-6 bg-electric brutal-border" />
+                  
+                  {/* Terminal-style Info Overlay */}
+                  <div className="absolute bottom-4 left-4 bg-raw-black text-electric p-2 brutal-border font-mono text-xs">
+                    <div className="flex items-center gap-2">
+                      <Terminal className="w-3 h-3" />
+                      <span>aamir.dev</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Floating Geometric Elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-concrete-dark brutal-border brutal-shadow" />
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-electric brutal-border brutal-shadow" />
           </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 electric-text" />
         </div>
       </div>
     </section>
