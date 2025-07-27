@@ -38,7 +38,7 @@ const Hero = () => {
                 4 YEARS OF EXPERIENCE CRAFTING 
                 <span className="electric-text font-bold"> BRUTAL</span> DIGITAL 
                 EXPERIENCES. SPECIALIZING IN REACT, TYPESCRIPT, AND 
-                <span className="electric-text font-bold"> UNCOMPROMISING</span> 
+                <span className="electric-text font-bold"> UNCOMPROMISING </span> 
                 USER INTERFACES.
               </p>
             </div>

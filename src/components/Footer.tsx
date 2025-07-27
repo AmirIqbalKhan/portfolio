@@ -46,19 +46,19 @@ const Footer = () => {
             <div className="flex gap-2 sm:gap-3 mb-3 sm:mb-4">
               <a
                 href="#"
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-industrial-gray brutal-border flex items-center justify-center hover:bg-electric transition-colors"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-industrial-gray brutal-border flex items-center justify-center hover:bg-electric transition-colors text-gray-300 hover:text-raw-white"
               >
                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-industrial-gray brutal-border flex items-center justify-center hover:bg-electric transition-colors"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-industrial-gray brutal-border flex items-center justify-center hover:bg-electric transition-colors text-gray-300 hover:text-raw-white"
               >
                 <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-industrial-gray brutal-border flex items-center justify-center hover:bg-electric transition-colors"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-industrial-gray brutal-border flex items-center justify-center hover:bg-electric transition-colors text-gray-300 hover:text-raw-white"
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
